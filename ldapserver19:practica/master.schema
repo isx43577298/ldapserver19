@@ -1,13 +1,13 @@
-attributetype ( 1.1.2.1.1 NAME 'x-matriculat'
- DESC 'validar si está matriculat o no'
- SYNTAX  1.3.6.1.4.1.1466.115.121.1.7
- SINGLE-VALUE )
+attributetype ( 1.1.2.1.1 NAME 'x-master'
+ DESC     'informacio del master'
+ EQUALITY caseIgnoreMatch
+ SUBSTR   caseIgnoreSubstringsMatch
+ SYNTAX   1.3.6.1.4.1.1466.115.121.1.15{20}
+ SINGLE-VALUE)
 
-attributetype ( 1.1.2.1.2 NAME 'x-master'
- DESC 'informació del master de l'alumne'
- EQUALITY caseExactMatch
- SUBSTR caseIgnoreSubstringsMatch
- SYNTAX  1.3.6.1.4.1.1466.115.121.1.15
+attributetype ( 1.1.2.1.2 NAME 'x-matriculat'
+ DESC 'validar si está matriculat o no'
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
  SINGLE-VALUE )
 
 attributetype ( 1.1.2.1.3 NAME 'x-anyo'
@@ -16,18 +16,18 @@ attributetype ( 1.1.2.1.3 NAME 'x-anyo'
  SINGLE-VALUE )
 
 attributetype ( 1.1.2.1.4 NAME 'x-foto'
- DESC 'fotografia de l'alumne'
- SYNTAX 1.3.6.1.4.1.1466.115.121.1.40 )
+ DESC 'foto del usuario'
+ SYNTAX   1.3.6.1.4.1.1466.115.121.1.40 )
 
 attributetype ( 1.1.2.1.5 NAME 'x-web'
- DESC 'pagina web de l'alumne'
- EQUALITY caseExactMatch
- SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+ DESC 'pagina web del usuario'
+ EQUALITY caseIgnoreMatch
+ SYNTAX   1.3.6.1.4.1.1466.115.121.1.15 )
 
 objectclass ( 1.1.2.2.1 NAME 'x-masters'
  DESC 'masters'
  SUP TOP
  AUXILIARY
- MUST x-matriculat
- MAY ( x-master $ x-anyo $ x-foto $ x-web ) )
+ MUST x-master
+ MAY ( x-matriculat $ x-anyo $ x-foto $ x-web ) )
 
