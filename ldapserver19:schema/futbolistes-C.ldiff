@@ -1,0 +1,13 @@
+dn: cn=kaka,ou=Productes,dc=edt,dc=org
+objectclass: inetOrgPerson
+objectclass: x-futbolistes
+cn: kaka
+sn: ricardo kaka
+x-equip: AC Milan
+x-dorsal: 10
+x-web: www.kaka.com
+x-foto:  ///var/tmp/foto.jpg
+x-lesionat: FALSE
+homePhone: 555-555-55
+mail: elcrack@edt.org
+
