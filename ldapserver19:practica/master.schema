@@ -22,12 +22,11 @@ attributetype ( 1.1.2.1.4 NAME 'x-foto'
 attributetype ( 1.1.2.1.5 NAME 'x-web'
  DESC 'pagina web de l'alumne'
  EQUALITY caseExactMatch
- SUBSTR caseIgnoreSubstringsMatch
  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
 
 objectclass ( 1.1.2.2.1 NAME 'x-masters'
  DESC 'masters'
- SUP inetOrgPerson
+ SUP TOP
  AUXILIARY
  MUST x-matriculat
  MAY ( x-master $ x-anyo $ x-foto $ x-web ) )
