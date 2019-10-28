@@ -9,7 +9,7 @@ mail: pepito@edt.org
 x-master: info
 x-anyo: 1
 x-web: www.pepe.com
-x-foto: ///var/tmp/foto.jpg
+x-foto:< file:///opt/docker/photo.jpeg
 x-matriculat: TRUE
 
 dn: uid=lola,ou=productes,dc=edt,dc=org
